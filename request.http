@@ -11,7 +11,7 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username":"admin",
+    "username":"admin3",
     "password":"1234"
 }
 
@@ -19,11 +19,17 @@ Content-Type: application/json
 ###
 POST http://localhost:5000/api/post/store
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDY5ZTE4ZDY1ZGI3NDRhNTQ5NmRkZDIiLCJpYXQiOjE2MTc1NTg5OTF9.bZhFGt2eepcqOH478tX2VAayUn32DQf054GJHXnga94
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDY5ZTE4ZDY1ZGI3NDRhNTQ5NmRkZDIiLCJpYXQiOjE2MTc2OTA1MTl9.8886Pa-P0Jh6rvCHDQ91g--rRLC_htScAfRSVPQ3p8E
 
 {
-    "title":"React 1",
+    "title":"React 2",
     "description":"Learn React",
     "url":"reactjs.org",
     "status":"Learning"
 }
+
+################################
+
+GET http://localhost:5000/api/post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDY5ZTE4ZDY1ZGI3NDRhNTQ5NmRkZDIiLCJpYXQiOjE2MTc2OTA1MTl9.8886Pa-P0Jh6rvCHDQ91g--rRLC_htScAfRSVPQ3p8E

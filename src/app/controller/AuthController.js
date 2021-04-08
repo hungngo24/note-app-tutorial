@@ -45,9 +45,7 @@ class AuthController {
             });
         } catch (error) {
             console.log(error.message);
-            return res
-                .status(500)
-                .json({ success: false, message: "Server error" });
+            res.status(500).json({ success: false, message: "Server error" });
         }
     }
 
@@ -79,20 +77,18 @@ class AuthController {
                 });
 
             // token
-            const Token = jwt.sign(
+            const token = jwt.sign(
                 { userId: user._id },
                 process.env.ACCESS_TOKEN_SECRET
             );
             res.json({
                 success: true,
                 message: "User logged in successfully",
-                Token,
+                token,
             });
         } catch (error) {
             console.log(error.message);
-            return res
-                .status(500)
-                .json({ success: false, message: "Server error" });
+            res.status(500).json({ success: false, message: "Server error" });
         }
     }
 
